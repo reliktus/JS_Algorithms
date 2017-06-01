@@ -1,3 +1,8 @@
+function blockSubmitRefresh() {
+    $('#form1').submit(function(event){
+        event.preventDefault();
+    });
+}
 
 function convertToRoman(num) {
     var roman ="";
@@ -62,6 +67,23 @@ function convertToRoman(num) {
         }
     }
 
+    /* function transformNum(numb, romA, romB, romC) {
+        if ( numb <= 3) {
+            for ( var i=0; i < numb; i++) {
+                roman += "I";
+            }
+        } else if ( numb === 4 ) {
+            roman += "IV";
+        } else if ( numb < 9) {
+            roman += "V";
+            for ( i=0; i < (numb-5) && numb > 5; i++) {
+                roman += "I";
+            }
+        } else {
+            roman += "IX";
+        }
+    } */
+
     function checkArr() {
         if ( numArr.length >= 4 )
         {
@@ -88,7 +110,17 @@ function convertToRoman(num) {
     }
 
     checkArr();
-    return roman;
+    console.log(roman);
+
+     $('#romanNumber').html(roman);
 }
 
-convertToRoman(97);
+function buttonConvert() {
+    $('#convert').click(function () {
+        var numVal = document.getElementById("toConvert").value;
+        // console.log(numVal);
+        convertToRoman(numVal);
+    })
+}
+
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="roman_numbers.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            convertToRoman(1229);
+            blockSubmitRefresh();
+            buttonConvert();
+        });
+    </script>
+    <form id="form1">
+        <div style="float: left;">Number to convert: </div>
+        <input type="text" title="Number to convert" id="toConvert" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        <button title="convert" id="convert" type="submit">CONVERT</button>
+    </form>
+    <div>ROMAN number:</div><div id="romanNumber"></div>
+
+</body>
+</html>
