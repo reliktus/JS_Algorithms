@@ -13,7 +13,7 @@
     </script>
     <form id="form1">
         <div style="float: left;">Number to convert: </div>
-        <input type="text" title="Number to convert" id="toConvert" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        <input type="text" title="Number to convert" id="toConvert" onKeyPress="return blockSubmitRefresh()">
         <button title="convert" id="convert" type="submit">CONVERT</button>
     </form>
     <div class="row">
