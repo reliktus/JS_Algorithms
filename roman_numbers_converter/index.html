@@ -7,7 +7,6 @@
 <body>
     <script>
         $(document).ready(function () {
-            convertToRoman(1229);
             blockSubmitRefresh();
             buttonConvert();
         });
@@ -17,7 +16,9 @@
         <input type="text" title="Number to convert" id="toConvert" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
         <button title="convert" id="convert" type="submit">CONVERT</button>
     </form>
-    <div>ROMAN number:</div><div id="romanNumber"></div>
+    <div class="row">
+        <div style="float: left;">ROMAN number:</div><div id="romanNumber"></div>
+    </div>
 
 </body>
 </html>
